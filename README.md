@@ -69,8 +69,6 @@ Deviation from Normal Behavior
 * **transaction_amount**: จำนวนเงิน
 * **transaction_timestamp**: เวลาในการทำธุรกรรม
 
----
-
 ### 🔹 Behavioral Features (Engineered Features)
 
 เพื่อสะท้อนพฤติกรรมของบัญชี ได้มีการสร้างตัวแปรเพิ่มเติม (feature engineering) ได้แก่:
@@ -90,8 +88,6 @@ Deviation from Normal Behavior
 * **dormant_status (Derived Feature)**
   สถานะของบัญชีที่ไม่มีการเคลื่อนไหวในช่วงระยะเวลาหนึ่ง (inactive >30 วัน)
   → ใช้วิเคราะห์พฤติกรรม dormant-to-active
-
----
 
 ### 🔹 Target Variable
 
