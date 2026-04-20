@@ -96,7 +96,7 @@ Deviation from Normal Behavior
 
 ---
 
-## 📈 Key Metrics (KPIs)
+## 5. Key Metrics (KPIs)
 
 จาก feature ข้างต้น ได้กำหนดตัวชี้วัดสำคัญ (Key Performance Indicators) สำหรับการตรวจจับ fraud ดังนี้:
 
