@@ -58,19 +58,66 @@ Deviation from Normal Behavior
 
 ---
 
-## 📊 Dataset & Features
+## 4. Dataset & Features
 
-Dataset ประกอบด้วย:
+โครงการนี้ใช้ข้อมูลธุรกรรมทางการเงิน (transaction-level data) เพื่อวิเคราะห์พฤติกรรมของบัญชีและตรวจจับ mule accounts โดย dataset ประกอบด้วยตัวแปรสำคัญดังนี้:
 
-* Transaction Data: sender, receiver, amount, timestamp
-* Behavioral Features:
+### 🔹 Transaction Data
 
-  * txn_count_last_1hr (velocity)
-  * txn_count_per_sender (network)
-  * is_abnormal_amount (deviation)
-* Target Variable:
+* **sender_account**: บัญชีผู้โอน
+* **receiver_account**: บัญชีผู้รับ
+* **transaction_amount**: จำนวนเงิน
+* **transaction_timestamp**: เวลาในการทำธุรกรรม
 
-  * is_mule_transaction
+---
+
+### 🔹 Behavioral Features (Engineered Features)
+
+เพื่อสะท้อนพฤติกรรมของบัญชี ได้มีการสร้างตัวแปรเพิ่มเติม (feature engineering) ได้แก่:
+
+* **txn_count_last_1hr (Transaction Velocity)**
+  จำนวนธุรกรรมที่เกิดขึ้นภายใน 1 ชั่วโมง
+  → ใช้ตรวจจับบัญชีที่มีความถี่ผิดปกติ
+
+* **txn_count_per_sender (Network / Fan-in)**
+  จำนวนผู้โอน (unique senders) ต่อบัญชีปลายทาง
+  → ใช้ตรวจจับการรับเงินจากหลายแหล่ง
+
+* **is_abnormal_amount (Deviation Indicator)**
+  ระบุว่าจำนวนเงินของธุรกรรมเบี่ยงเบนจากพฤติกรรมปกติหรือไม่
+  → ใช้ตรวจจับ anomaly
+
+* **dormant_status (Derived Feature)**
+  สถานะของบัญชีที่ไม่มีการเคลื่อนไหวในช่วงระยะเวลาหนึ่ง (inactive >30 วัน)
+  → ใช้วิเคราะห์พฤติกรรม dormant-to-active
+
+---
+
+### 🔹 Target Variable
+
+* **is_mule_transaction**
+  ตัวแปร label ที่ระบุว่าธุรกรรมนั้นเกี่ยวข้องกับ mule account หรือไม่ (1 = fraud, 0 = normal)
+
+---
+
+## 📈 Key Metrics (KPIs)
+
+จาก feature ข้างต้น ได้กำหนดตัวชี้วัดสำคัญ (Key Performance Indicators) สำหรับการตรวจจับ fraud ดังนี้:
+
+* **Transaction Velocity**
+  วัดความถี่ของธุรกรรมในช่วงเวลาสั้น
+
+* **Network Pattern (Fan-in)**
+  วัดจำนวน sender ต่อบัญชีปลายทาง
+
+* **Deviation Score**
+  วัดระดับความผิดปกติของจำนวนเงิน
+
+* **Dormant-to-Active Behavior**
+  วัดการกลับมาใช้งานของบัญชีที่เคย inactive
+
+KPI เหล่านี้ถูกนำไปใช้เป็นพื้นฐานในการวิเคราะห์ (Section 5) และสร้าง insight (Section 6) เพื่อระบุพฤติกรรมของ mule accounts อย่างเป็นระบบ
+
 
 📌 **(ยังไม่ต้องใส่รูป — optional)**
 👉 ถ้ามี ER diagram หรือ schema → ใส่ได้ตรงนี้
