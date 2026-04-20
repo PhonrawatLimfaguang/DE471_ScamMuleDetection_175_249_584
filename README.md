@@ -208,9 +208,9 @@ Accounts ที่มีจำนวน sender สูงในช่วงเว
 
 ## 👥 Contributors
 
-* Member 1: Data Preparation
-* Member 2: Dashboard
-* Member 3: Insights & Story (โอ๊ต)
+* Member 1: นายปัณณธร สุวรรณาศรัย รหัสนิสิต 66102010175
+* Member 2: นายพลวัต พงศ์ทิพย์พนัส รหัสนิสิต 66102010249
+* Member 3: นายพลวิชญ์ วนิดา รหัสนิสิต 66102010584
 
 ---
 
