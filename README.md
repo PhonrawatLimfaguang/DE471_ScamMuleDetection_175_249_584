@@ -62,14 +62,14 @@ Deviation from Normal Behavior
 
 โครงการนี้ใช้ข้อมูลธุรกรรมทางการเงิน (transaction-level data) เพื่อวิเคราะห์พฤติกรรมของบัญชีและตรวจจับ mule accounts โดย dataset ประกอบด้วยตัวแปรสำคัญดังนี้:
 
-### 🔹 Transaction Data
+### 4.1 Transaction Data
 
 * **sender_account**: บัญชีผู้โอน
 * **receiver_account**: บัญชีผู้รับ
 * **transaction_amount**: จำนวนเงิน
 * **transaction_timestamp**: เวลาในการทำธุรกรรม
 
-### 🔹 Behavioral Features (Engineered Features)
+### 4.2 Behavioral Features (Engineered Features)
 
 เพื่อสะท้อนพฤติกรรมของบัญชี ได้มีการสร้างตัวแปรเพิ่มเติม (feature engineering) ได้แก่:
 
@@ -89,7 +89,7 @@ Deviation from Normal Behavior
   สถานะของบัญชีที่ไม่มีการเคลื่อนไหวในช่วงระยะเวลาหนึ่ง (inactive >30 วัน)
   → ใช้วิเคราะห์พฤติกรรม dormant-to-active
 
-### 🔹 Target Variable
+### 4.3 Target Variable
 
 * **is_mule_transaction**
   ตัวแปร label ที่ระบุว่าธุรกรรมนั้นเกี่ยวข้องกับ mule account หรือไม่ (1 = fraud, 0 = normal)
