@@ -52,11 +52,11 @@ Deviation from Normal Behavior
 
 ---
 
-## ❓ Key Questions
+## 3. Key Questions
 
-* **Network Level:** Accounts ที่มีหลาย sender ในเวลาสั้น มี fraud สูงหรือไม่
-* **Account Level:** บัญชี dormant (inactive >30 วัน) แล้วกลับมา active มีพฤติกรรมผิดปกติหรือไม่
-* **Behavior Level:** ธุรกรรมที่ deviation >3 เท่า มีความสัมพันธ์กับ fraud หรือไม่
+* **Network Level:** Accounts ที่ได้รับเงินจากหลาย sender ภายในระยะเวลาสั้นๆ (เช่น 1 ชั่วโมง) มี fraud rate สูงกว่าบัญชีทั่วไปหรือไม่ และมี threshold เท่าใดที่สามารถใช้เป็นสัญญาณเตือน
+* **Account Level:** บัญชีที่มีลักษณะแบบ dormant (ไม่มีการใช้งานในช่วงระยะเวลาหนึ่ง) แล้วกลับมา active มี transaction pattern ที่ผิดปกติ เช่น sudden spike (>3x ของค่าเฉลี่ยภายใน 1 ชั่วโมง) ในจำนวนเงินหรือความถี่ มากกว่าบัญชีทั่วไปหรือไม่
+* **Behavior Level:** ธุรกรรมที่มี deviation จากพฤติกรรมปกติของลูกค้า (เช่น amount สูงกว่าค่าเฉลี่ย X เท่า) มีความสัมพันธ์เชื่อมโยงกับการเกิด fraud มากน้อยเพียงใด
 
 ---
 
