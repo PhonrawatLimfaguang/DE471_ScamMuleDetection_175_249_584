@@ -161,7 +161,7 @@ Accounts ที่ได้รับเงินจากหลาย sender ภ
 มี fraud rate ประมาณ **[33.33%]** เทียบกับ **[2.01%]** หรือสูงกว่าประมาณ **[16.5 เท่า]**
 สะท้อนพฤติกรรม mule accounts ที่รับเงินจากหลายแหล่งก่อนโอนออก
 
-![Network pattern](image/Network Pattern.png)
+![Network pattern](image/network_pattern.png)
 
 ---
 
@@ -172,7 +172,7 @@ Accounts ที่ได้รับเงินจากหลาย sender ภ
 หรือสูงกว่าประมาณ **[26%]** 
 สะท้อนการนำบัญชีเก่าที่ไม่มีการใช้งานกลับมาใช้เพื่อหลีกเลี่ยงการตรวจจับ
 
-![Dormant Account](image/Dormant Account.png)
+![Dormant Account](image/dormant_account.png)
 
 ---
 
@@ -183,7 +183,7 @@ Accounts ที่ได้รับเงินจากหลาย sender ภ
 แสดงให้เห็นว่าพฤติกรรม spike หลัง inactive เป็นสัญญาณความเสี่ยงที่สำคัญ
 สะท้อนพฤติกรรม hit-and-run ซึ่งบัญชีจะกลับมาใช้งานและทำธุรกรรมจำนวนมากในระยะเวลาสั้นก่อนหยุดใช้งานอีกครั้ง
 
-![Dormant-to-Active Spike](image/Dormant-to-Active Spike.png)
+![Dormant-to-Active Spike](image/spike.png)
 
 ---
 
@@ -193,7 +193,7 @@ Accounts ที่ได้รับเงินจากหลาย sender ภ
 หรือสูงกว่าประมาณ 2 เท่า สะท้อนว่าธุรกรรมที่มีจำนวนเงินผิดปกติเป็นตัวบ่งชี้ fraud ที่สำคัญ
 แสดงว่าการเบี่ยงเบนของจำนวนเงินเป็นสัญญาณสำคัญ
 
-![Deviation Behavior](image/Deviation Behavior.png)
+![Deviation Behavior](image/deviation.png)
 
 ---
 
