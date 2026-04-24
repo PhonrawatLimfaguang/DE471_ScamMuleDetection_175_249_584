@@ -115,8 +115,7 @@ Deviation from Normal Behavior
 KPI เหล่านี้ถูกนำไปใช้เป็นพื้นฐานในการวิเคราะห์ (Section 5) และสร้าง insight (Section 6) เพื่อระบุพฤติกรรมของ mule accounts อย่างเป็นระบบ
 
 
-📌 **(ยังไม่ต้องใส่รูป — optional)**
-👉 ถ้ามี ER diagram หรือ schema → ใส่ได้ตรงนี้
+![ER diagram](Image/Diagram.png)
 
 ---
 
